@@ -36,9 +36,17 @@ Before you begin, make sure you have the following installed:
 ## Installation
 
 
+## Dataset 
+PACS dataset
 
-## Training
+```
+wget https://wjdcloud.blob.core.windows.net/dataset/PACS.zip
+unzip PACS.zip
+```
+## How to run
 
-```shell
-python -m train.adversarial_training_clip --clip_model_name ViT-L-14 --pretrained openai --dataset imagenet --imagenet_root /path/to/imagenet --template std --output_normalize True --steps 20000 --warmup 1400 --batch_size 128 --loss ce --opt adamw --lr 1e-5 --wd 1e-4 --attack pgd --inner_loss ce --norm linf --eps 4 --iterations_adv 10 --stepsize_adv 1 --wandb False --output_dir /path/to/out/dir --experiment_name TECOA4 --log_freq 10 --eval_freq 10```
+We provide the commands for four tasks in PACS to reproduce the results.
+
+```
+python methods/fed_at_clip.py --dataset pacs --mode FedAtImg --test_envs 0 --iters 200 --wk_iters 1 --lr 5e-05
 ```
