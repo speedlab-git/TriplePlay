@@ -48,5 +48,5 @@ unzip PACS.zip
 We provide the commands for four tasks in PACS to reproduce the results.
 
 ```
-python methods/fed_at_clip.py --dataset pacs --mode FedAtImg --test_envs 0 --iters 200 --wk_iters 1 --lr 5e-05
+python methods/main.py --dataset pacs --mode FedAtImg --test_envs 0 --iters 200 --wk_iters 1 --lr 5e-05
 ```
